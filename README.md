@@ -263,7 +263,7 @@ Retrieve information by searching for a value in the first column of a table.
 **Example: Retrieve a student name using Student ID**
 
 ```excel
-=VLOOKUP(P5,A2:B21,2,FALSE)
+=VLOOKUP(R2,A1:B21,2,FALSE)
 ```
 
 The formula searches for the ID in `P5` and returns the corresponding student name.
@@ -282,7 +282,7 @@ Combine INDEX and MATCH to retrieve information dynamically.
 **Example: Retrieve an employee's department using Employee ID**
 
 ```excel
-=INDEX(C2:C21,MATCH(G5,A2:A21,0))
+=INDEX(C2:C21,MATCH(L2,A2:A21,0))
 ```
 
 MATCH identifies the position of the employee ID, and INDEX returns the corresponding department.
@@ -330,7 +330,7 @@ Retrieve matching information from separate lookup and return ranges.
 **Example: Retrieve an employee's salary**
 
 ```excel
-=XLOOKUP(G2,A2:A21,D2:D21,"Employee Not Found")
+=XLOOKUP(J2,A2:A21,D2:D21,"employee not found")
 ```
 
 The formula searches for the employee ID in column A and returns the matching salary from column D.
@@ -349,7 +349,7 @@ Find the relative position of a value within a range.
 **Example: Find the position of a product**
 
 ```excel
-=XMATCH(N2,B2:B21,0)
+=XMATCH(P2,B2:B21,0)
 ```
 
 The formula returns the position of the first exact match in the specified product range.
@@ -421,13 +421,13 @@ Perform date calculations and extract information from dates.
 **DATEDIF — Calculate complete years between dates**
 
 ```excel
-=DATEDIF(E2,TODAY(),"Y")
+=DATEDIF(F2,TODAY(),"Y")
 ```
 
 **Calculate the difference in days**
 
 ```excel
-=H8-G8
+=H2-G2
 ```
 
 **Skills practiced:**
@@ -474,15 +474,15 @@ Extract records that satisfy a specified condition.
 **Example: Filter students whose Math marks exceed 80**
 
 ```excel
-=FILTER('Students Grade'!A1:H21,'Students Grade'!C1:C21>80,"No students found")
+=FILTER(students!A1:H21,students!G1:G21>80,"No students found")
 ```
 
-This formula returns matching student records based on their Math marks.
+This formula returns matching student records based on their avg marks.
 
-**Alternative: Filter students whose average marks exceed 80**
+**Alternative: Filter students whose math marks exceed 80**
 
 ```excel
-=FILTER('Students Grade'!A1:H21,'Students Grade'!G1:G21>80,"No students found")
+=FILTER(Students!A1:H21,Students!c1:c21>80,"No students found")
 ```
 
 **Skills practiced:**
